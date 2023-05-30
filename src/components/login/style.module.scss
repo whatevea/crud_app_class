@@ -1,0 +1,31 @@
+.container {
+    margin: 70px auto 60px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    form {
+        padding: 24px;
+        background-color: #eee;
+        border-radius: 10px;
+        h2 {
+            margin: 0 10px;
+        }
+        .wrapper {
+            margin: 10px;
+      
+            input {
+              margin-top: 10px;
+              border: 1px solid black;
+              border-radius: 12px;
+              line-height: 20px;
+              padding: 8px 16px;
+              width: 100%;
+            }
+        }
+        .inline {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}

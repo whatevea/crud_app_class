@@ -1,0 +1,47 @@
+.container {
+    margin: 70px auto 60px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    form {
+        padding: 32px 24px;
+        background-color: #efefef;
+        border-radius: 10px;
+        width: 30%;
+        h2 {
+            margin: 0 10px;
+        }
+        .wrapper {
+            margin: 10px;
+      
+            input {
+              margin-top: 10px;
+              border: 1px solid black;
+              border-radius: 5px;
+              line-height: 20px;
+              padding: 8px 12px;
+              width: 100%;
+            }
+            .error {
+                color: #f42020;
+                font-size: 14px;
+            }
+            button {
+                width: 49%;
+                padding: 8px 12px;
+                border: 1px solid #333;
+                border-radius: 5px;
+            }
+            button:hover {
+                background:#333;
+                color: white;
+            }
+        }
+        .inline {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}

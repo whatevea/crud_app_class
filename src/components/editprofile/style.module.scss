@@ -1,0 +1,36 @@
+.container {
+	margin: 70px auto 60px auto;
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(175, 165, 153);
+	height: 80vh;
+	width: 80vw;
+	justify-content: center;
+	align-items: center;
+
+	div {
+		width: 40%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		input {
+			border: 3px solid gray;
+			border-radius: 20%;
+			padding: 6px;
+			margin: 5px;
+			width: 60%;
+		}
+	}
+
+	.buttons {
+		margin-top: 10px;
+
+		input {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			border: none;
+			border-radius: 10px;
+			padding: 12px
+		}
+	}
+}
