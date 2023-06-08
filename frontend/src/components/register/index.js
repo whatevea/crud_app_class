@@ -9,8 +9,6 @@ const Register = () => {
     const dispatch = useDispatch();
     const users = useSelector(userSelector);
     const ref = useRef();
-    // console.log(users);
-
     const [values, setValues] = useState({
         email: "",
         password: "",
