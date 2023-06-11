@@ -10,8 +10,21 @@ exports.registerUser = (req, res) => {
         res.json(user)
     })
 }
+exports.deleteUser = (req, res) => {
+    console.log(req)
+    User.deleteOne({ _id: req.body.id }).then(data => {
+        console.log("successfully deleted")
+        res.json({ message: "Successfuly delted user" })
+    })
+}
 exports.getUser = (req, res) => {
     res.json({
         user: "none"
     })
 }
+exports.allUsers = (req, res) => {
+    User.find().then(data => {
+        res.json({ data })
+    })
+}
+
