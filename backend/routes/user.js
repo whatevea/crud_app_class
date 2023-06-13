@@ -1,7 +1,10 @@
 const controllers = require("../controllers/userController")
+
 module.exports = (app) => {
-    app.post("/register", controllers.registerUser)
-    app.get("/user", controllers.getUser)
-    app.get("/users", controllers.allUsers)
-    app.delete("/user", controllers.deleteUser)
+    console.log({ key: `${process.env.APP_VERSION}/register` })
+    app.post(`/${process.env.APP_VERSION}/register`, controllers.registerUser)
+    app.get(`/${process.env.APP_VERSION}/user`, controllers.getUser)
+    app.get(`/${process.env.APP_VERSION}/users`, controllers.allUsers)
+    app.delete(`/${process.env.APP_VERSION}/user`, controllers.deleteUser)
 }
+

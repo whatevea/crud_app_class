@@ -3,8 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { create, userSelector } from "../../redux/reducers/userSlice";
 import style from "./style.module.scss";
-import axios from "axios"
-const regUrl = "http://localhost:5000/register"
+import http from '../../config'
 const Register = () => {
     const dispatch = useDispatch();
     const users = useSelector(userSelector);
@@ -22,7 +21,7 @@ const Register = () => {
     const handleRegister = (e) => {
         e.preventDefault();
         //insert into database
-        axios.post(regUrl, values).then(data => {
+        http.post("/register", values).then(data => {
             console.log("sending data")
         }).catch(err => { console.log(err) })
 

@@ -4,13 +4,13 @@ import { useSelector, useDispatch } from 'react-redux'
 import { crudSelector, deleteData } from '../../redux/reducers/crudSlice'
 import Delete from '../commons/delete'
 import style from './style.module.scss'
-import axios from 'axios'
+import http from '../../config'
 import Swal from "sweetalert2"
 const Users = () => {
     // const selector = useSelector(crudSelector)
     // const dispatch = useDispatch()
     const getUsers = () => {
-        axios.get("http://localhost:5000/users").then(
+        http.get("/users").then(
             data => {
                 let usersList = data.data.data
                 setUsers(usersList)
@@ -33,7 +33,7 @@ const Users = () => {
     }
 
     const deleteItem = () => {
-        axios.delete("http://localhost:5000/user", { data: { id: deleteID } }).then(data => {
+        http.delete("/user", { data: { id: deleteID } }).then(data => {
             getUsers()
             setShowDelete(false)
             Swal.fire({
